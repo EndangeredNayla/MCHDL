@@ -28,11 +28,11 @@ jobs:
       
     # Build Project
     - name: Build Project
-      run: build.bat
+      run: pyinstaller --onefile --icon=icon.ico --noupx main.py
       
     # Upload Artifact
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: MCHDL-win32
-        path: D:\a\MCHDL\MCHDL\bin
+        path: D:\a\MCHDL\MCHDL\dist
